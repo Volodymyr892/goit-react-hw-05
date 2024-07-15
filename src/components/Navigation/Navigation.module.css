@@ -1,0 +1,16 @@
+.nav {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    justify-items: center;
+  }
+  
+  .link {
+    text-decoration: none;
+    color: black;
+    font-size: 35px;
+  }
+  
+  .active {
+    color: rgb(0, 38, 255);
+  }
