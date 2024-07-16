@@ -33,7 +33,7 @@ import { fetchMovieDetails } from '../movie-api';
       ) : (
         movie && (
           <>
-            <NavLink to={previousLocation}>Go back</NavLink>
+            <NavLink to={previousLocation.current}>Go back</NavLink>
             <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} alt={movie.title} />
             <div>
                 <h1>{movie.title}</h1>

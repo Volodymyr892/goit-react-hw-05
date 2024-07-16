@@ -1,5 +1,5 @@
 
-import {  Routes, Route, Router, } from 'react-router-dom';
+import {  Routes, Route, BrowserRouter, } from 'react-router-dom';
 import Navigation from '../Navigation/Navigation';
 import { Suspense, lazy } from 'react';
 const HomePage = lazy(() => import('../../pages/HomePage'));
@@ -18,7 +18,7 @@ const MovieReviews = lazy(() => import('../MovieReviews/MovieReviews'));
 
 export default function App(){
     return(
-    <Router>
+    <BrowserRouter>
        <div>
             <Navigation/>
     
@@ -27,13 +27,13 @@ export default function App(){
                     <Route path="/" element={<HomePage/>}/>
                     <Route path="/movies" element={<MoviesPage/>}/>
                     <Route path="movies/:movieId" element={<MovieDetailsPage/>}>
-                        <Route path="Cast" element={<MovieCast/>}/>
+                        <Route path="сast" element={<MovieCast/>}/>
                         <Route path='reviews' element={<MovieReviews/>}/>
                     </Route>
                     <Route path="*" element={<NotFoundPage/>}/>
                 </Routes>
            </Suspense>
        </div>
-    </Router>
+    </BrowserRouter>
     );
 }
