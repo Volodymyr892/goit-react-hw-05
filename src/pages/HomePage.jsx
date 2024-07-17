@@ -10,11 +10,9 @@ export default function HomePage(){
         const getTrendingMovies = async()=> {
             try {
                 const movies =await fetchTrendingMovie();
-                console.log("Trending Movies:", movies);
                 setMovies(movies);
                 setError(null);
             } catch (error) {
-                console.log("Error fetching trending movies:", error);
                 setError('Error fetching trending movies');
             }
         }
